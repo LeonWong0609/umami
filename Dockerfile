@@ -23,8 +23,6 @@ RUN yarn install --frozen-lockfile
 
 COPY . /build
 RUN yarn next telemetry disable
-# Ensures `yarn build` will always run when BUILD_TIME is different
-ARG BUILD_TIME
 RUN yarn build
 
 # Production image
